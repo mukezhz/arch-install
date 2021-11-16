@@ -19,12 +19,14 @@ echo root:password | chpasswd
 # You can add xorg to the installation packages, I usually add it at the DE or WM install script
 # You can remove the tlp package if you are installing on a desktop or vm
 
-# pacman -Syy
+pacman -Syy
 
 # pacman -S grub efibootmgr mtools dosfstools os-prober
 
 # grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 # grub-mkconfig -o /boot/grub/grub.cfg
+
+pacman -S sudo
 
 useradd -m $localuser
 echo $localuser:password | chpasswd
