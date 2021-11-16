@@ -16,12 +16,11 @@
 
 ## Partition the disk and format.
 
-    Find your drive `## fdisk -l` or `## gdisk /dev/XXX`
-    Make EFI partition 512M (ef00)
-    Make SWAP partition 4G (8200)
-    Make root partition 50G (8300)
-    Make home partition "rest minus some space on SSD" (8300)
-
+    Find your drive `## fdisk -l`
+    Make EFI partition 512M (1)
+    Make SWAP partition 4G (19)
+    Make root partition 50G
+    Make home partition "rest minus some space on SSD"
     `## mkfs.vfat /dev/sda1`
 
     `## mkswap /dev/sda2`
